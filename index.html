@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meus sites favoritos</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0b0911;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Menu superior */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 10%;
+            background: #110d19;
+            border-bottom: 1px solid #30243e;
+        }
+
+        .logo {
+            color: #b58aff;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .menu {
+            color: #c9bfd6;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        /* Apresentação principal */
+        .inicio {
+            padding: 100px 10% 70px;
+            background:
+                radial-gradient(ellipse at 80% 20%,
+                #382052 0%, transparent 50%);
+        }
+
+        .subtitulo {
+            color: #b58aff;
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .inicio h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            max-width: 750px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .destaque {
+            color: #b58aff;
+        }
+
+        .inicio p {
+            color: #a69bb5;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 520px;
+        }
+
+        /* Área dos favoritos */
+        .favoritos {
+            padding: 40px 10% 100px;
+        }
+
+        .secao-titulo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+
+        .secao-titulo h2 {
+            font-size: 25px;
+        }
+
+        .secao-titulo span {
+            color: #a78acb;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        /* Organização dos cartões */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,
+            minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        /* Cartões individuais */
+        .site {
+            background: linear-gradient(
+                145deg, #1b1525, #100d17
+            );
+            border: 1px solid #30243e;
+            border-radius: 18px;
+            padding: 30px 25px;
+            min-height: 280px;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site:hover {
+            transform: translateY(-10px);
+            border-color: #9b6ce0;
+            box-shadow: 0 15px 40px #8d45c522;
+        }
+
+        .site img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            margin-bottom: 25px;
+        }
+
+        .site h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .site p {
+            color: #a69bb5;
+            font-size: 14px;
+            line-height: 1.6;
+            min-height: 45px;
+            margin-bottom: 25px;
+        }
+
+        .site a {
+            display: inline-block;
+            color: #c3a0ff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .site a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Rodapé */
+        footer {
+            padding: 30px 10%;
+            border-top: 1px solid #30243e;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: #82768f;
+            font-size: 12px;
+        }
+
+        /* Adaptação para celulares */
+        @media (max-width: 600px) {
+            header {
+                padding: 20px 6%;
+            }
+
+            .inicio {
+                padding: 75px 7% 50px;
+            }
+
+            .favoritos {
+                padding: 30px 7% 70px;
+            }
+
+            .menu {
+                font-size: 10px;
+            }
+
+            footer {
+                padding: 25px 7%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Menu de navegação -->
+    <header>
+        <div class="logo">✳ Nicolly.dev</div>
+        <div class="menu">MEU ESPAÇO DIGITAL</div>
+    </header>
+
+    <!-- Apresentação -->
+    <section class="inicio">
+
+        <div class="subtitulo">
+            BEM-VINDO AO MEU UNIVERSO DIGITAL
+        </div>
+
+        <h1>
+            Meu universo,
+            <span class="destaque">minhas conexões.</span>
+        </h1>
+
+        <p>
+            Um espaço para reunir os sites que fazem
+            parte do meu dia a dia. Tecnologia,
+            entretenimento, criatividade e muito mais.
+        </p>
+
+    </section>
+
+    <!-- Lista de sites favoritos -->
+    <section class="favoritos">
+
+        <div class="secao-titulo">
+            <h2>Meus favoritos</h2>
+            <span>01 — 05</span>
+        </div>
+
+        <div class="container">
+
+            <!-- Steam -->
+            <div class="site">
+                <img src="https://cdn.simpleicons.org/steam/FFFFFF"
+                alt="Logo da Steam">
+
+                <h3>Steam</h3>
+
+                <p>
+                    Minha plataforma para descobrir
+                    jogos e aproveitar momentos de diversão.
+                </p>
+
+                <a href="https://store.steampowered.com/"
+                target="_blank">EXPLORAR SITE ↗</a>
+            </div>
+
+            <!-- Discord -->
+            <div class="site">
+                <img src="https://cdn.simpleicons.org/discord/7289DA"
+                alt="Logo do Discord">
+
+                <h3>Discord</h3>
+
+                <p>
+                    Um espaço para conversar,
+                    compartilhar ideias e conhecer pessoas.
+                </p>
+
+                <a href="https://discord.com/"
+                target="_blank">EXPLORAR SITE ↗</a>
+            </div>
+
+            <!-- GitHub -->
+            <div class="site">
+                <img src="https://cdn.simpleicons.org/github/FFFFFF"
+                alt="Logo do GitHub">
+
+                <h3>GitHub</h3>
+
+                <p>
+                    Onde a programação ganha vida
+                    através de projetos e códigos.
+                </p>
+
+                <a href="https://github.com/"
+                target="_blank">EXPLORAR SITE ↗</a>
+            </div>
+
+            <!-- YouTube -->
+            <div class="site">
+                <img src="https://cdn.simpleicons.org/youtube/FF0033"
+                alt="Logo do YouTube">
+
+                <h3>YouTube</h3>
+
+                <p>
+                    Vídeos, conteúdos interessantes
+                    e entretenimento para qualquer momento.
+                </p>
+
+                <a href="https://www.youtube.com/"
+                target="_blank">EXPLORAR SITE ↗</a>
+            </div>
+
+            <!-- Spotify -->
+            <div class="site">
+                <img src="https://cdn.simpleicons.org/spotify/1ED760"
+                alt="Logo do Spotify">
+
+                <h3>Spotify</h3>
+
+                <p>
+                    Minhas músicas favoritas,
+                    playlists e descobertas musicais.
+                </p>
+
+                <a href="https://open.spotify.com/"
+                target="_blank">EXPLORAR SITE ↗</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <span>© 2026 Nicolly.dev</span>
+        <span>DESENVOLVIDO POR NICOLLY | AGENDA 12</span>
+    </footer>
+
+</body>
+</html>
